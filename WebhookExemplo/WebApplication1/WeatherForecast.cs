@@ -1,4 +1,4 @@
-namespace WebApplication1
+namespace Webhook.API
 {
     public class WeatherForecast
     {
