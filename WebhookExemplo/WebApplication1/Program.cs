@@ -5,7 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSingleton<WebhookService>();
-builder.Services.AddLogging();
 
 builder.Services.AddW3CLogging(logging =>
 {
@@ -41,3 +40,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+record PublishRequest(string Topic, object Message);
